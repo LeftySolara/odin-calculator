@@ -1,0 +1,44 @@
+body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    width: 20%;
+}
+
+#numberButtons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
+    align-self: flex-start;
+    width: 75%;
+    margin: 0;
+}
+
+#operatorButtons {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+    align-items: stretch;
+    width: 25%;
+    margin: 0;
+}
+
+.numberBtn {
+    flex-basis: 33%;
+    font-size: 2em;
+}
+
+.operatorBtn {
+    flex-grow: 1;
+    font-size: 2em;
+}
