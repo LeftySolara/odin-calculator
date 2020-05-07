@@ -4,13 +4,32 @@ body {
     width: 100%;
 }
 
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#calculator {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0 auto;
+    width: 20%;
+}
+
+#display {
+    border: 2px solid black;
+    width: 100%;
+    font-size: 2em;
+}
+
 #buttons {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
     align-content: center;
-    width: 20%;
 }
 
 #numberButtons {
