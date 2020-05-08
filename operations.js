@@ -24,15 +24,24 @@ function inputNumber(number) {
     display.value = oldString + number;
 }
 
+function clearDisplay() {
+    let display = document.querySelector("#display");
+    display.value = "";
+}
+
 function initialize() {
     let numberButtons = document.querySelectorAll(".numberBtn");
-
     for (let i = 0; i < numberButtons.length; ++i) {
         let number = numberButtons[i].textContent;
         numberButtons[i].addEventListener("click", function (e) {
             inputNumber(number);
         });
     }
+
+    let clearButton = document.querySelector("#clearBtn");
+    clearButton.addEventListener("click", clearDisplay);
+
+    clearDisplay();
 }
 
 initialize();
