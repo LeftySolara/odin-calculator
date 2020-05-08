@@ -22,6 +22,7 @@ body {
     border: 2px solid black;
     width: 100%;
     font-size: 2em;
+    text-align: right;
 }
 
 #buttons {
@@ -50,6 +51,11 @@ body {
     align-items: stretch;
     width: 25%;
     margin: 0;
+}
+
+#clearBtn {
+    flex-basis: 33%;
+    font-size: 2em;
 }
 
 .numberBtn {

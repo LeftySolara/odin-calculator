@@ -17,3 +17,22 @@ function divide(a, b) {
 function operate(operator, a, b) {
     return add(a, b);
 }
+
+function inputNumber(number) {
+    let display = document.querySelector("#display");
+    let oldString = display.textContent;
+    display.textContent = number + oldString;
+}
+
+function initialize() {
+    let numberButtons = document.querySelectorAll(".numberBtn");
+
+    for (let i = 0; i < numberButtons.length; ++i) {
+        let number = numberButtons[i].textContent;
+        numberButtons[i].addEventListener("click", function (e) {
+            inputNumber(number);
+        });
+    }
+}
+
+initialize();
