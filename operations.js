@@ -20,8 +20,8 @@ function operate(operator, a, b) {
 
 function inputNumber(number) {
     let display = document.querySelector("#display");
-    let oldString = display.textContent;
-    display.textContent = number + oldString;
+    let oldString = display.value;
+    display.value = oldString + number;
 }
 
 function initialize() {
