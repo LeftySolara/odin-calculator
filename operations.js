@@ -18,7 +18,7 @@ function operate(operator, a, b) {
     return add(a, b);
 }
 
-function inputNumber(number) {
+function inputSymbol(number) {
     let display = document.querySelector("#display");
     let oldString = display.value;
     display.value = oldString + number;
@@ -30,11 +30,11 @@ function clearDisplay() {
 }
 
 function initialize() {
-    let numberButtons = document.querySelectorAll(".numberBtn");
+    let numberButtons = document.querySelectorAll(".symbolBtn");
     for (let i = 0; i < numberButtons.length; ++i) {
         let number = numberButtons[i].textContent;
         numberButtons[i].addEventListener("click", function (e) {
-            inputNumber(number);
+            inputSymbol(number);
         });
     }
 
