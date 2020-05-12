@@ -4,66 +4,76 @@ body {
     width: 100%;
 }
 
+button {
+    width: 1.5em;
+    height: 1.5em;
+}
+
 #container {
     display: flex;
     align-items: center;
+    align-content: center;
     justify-content: center;
     height: 100%;
 }
 
 #calculator {
-    display: flex;
-    flex-flow: column wrap;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "display display"
+        "numberButtons operatorButtons";
+    grid-gap: 0px;
     width: 20%;
 }
 
 #display {
-    border: 2px solid black;
-    width: 100%;
-    font-size: 2em;
-    text-align: right;
-}
-
-#buttons {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: center;
+    grid-area: display;
+    height: 1.5em;
+    width: 95%;
 }
 
 #numberButtons {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: center;
-    align-self: flex-start;
-    width: 75%;
-    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-area: numberButtons;
 }
 
 #operatorButtons {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: stretch;
-    align-items: stretch;
-    width: 25%;
-    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-area: operatorButtons;
+    grid-template-areas:
+        "plus backspace"
+        "minus ."
+        "mult ."
+        "divide equals";
 }
 
-#clearBtn {
-    flex-basis: 33%;
-    font-size: 2em;
+#plus {
+    grid-area: plus;
 }
 
-.numberBtn {
-    flex-basis: 33%;
-    font-size: 2em;
+#minus {
+    grid-area: minus;
 }
 
-.operatorBtn {
-    flex-grow: 1;
-    font-size: 2em;
+#mult {
+    grid-area: mult;
+}
+
+#divide {
+    grid-area: divide;
+}
+
+
+#backspaceBtn {
+    grid-area: backspace;
+}
+
+#equalsBtn {
+    grid-area: equals;
 }
