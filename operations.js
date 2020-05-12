@@ -24,6 +24,11 @@ function inputSymbol(number) {
     display.value = oldString + number;
 }
 
+function backspace() {
+    let display = document.querySelector("#display");
+    display.value = display.value.slice(0, display.value.length - 1);
+}
+
 function clearDisplay() {
     let display = document.querySelector("#display");
     display.value = "";
@@ -40,6 +45,9 @@ function initialize() {
 
     let clearButton = document.querySelector("#clearBtn");
     clearButton.addEventListener("click", clearDisplay);
+
+    let backspaceButton = document.querySelector("#backspace");
+    backspaceButton.addEventListener("click", backspace);
 
     clearDisplay();
 }
