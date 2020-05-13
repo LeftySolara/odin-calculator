@@ -21,7 +21,7 @@ class Stack {
 }
 
 function isValidInput(ch) {
-    let validChars = "1234567890+-*/^.";
+    let validChars = "1234567890+-*/^.()";
     return validChars.includes(ch);
 }
 
