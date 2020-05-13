@@ -138,6 +138,18 @@ function clearDisplay() {
     display.value = "";
 }
 
+function calculate() {
+    let display = document.querySelector("#display");
+    let result = evaluate(display.value);
+
+    if (isNaN(result)) {
+        display.value = "ERROR";
+    }
+    else {
+        display.value = result;
+    }
+}
+
 function initialize() {
     let numberButtons = document.querySelectorAll(".symbolBtn");
     for (let i = 0; i < numberButtons.length; ++i) {
@@ -154,11 +166,7 @@ function initialize() {
     backspaceButton.addEventListener("click", backspace);
 
     let equalsButton = document.querySelector("#equals");
-    equalsButton.addEventListener("click", function(e) {
-        let display = document.querySelector("#display");
-        let result = evaluate(display.value);
-        display.value = result;
-    })
+    equalsButton.addEventListener("click", calculate);
 
     clearDisplay();
 }
