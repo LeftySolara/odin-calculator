@@ -20,6 +20,11 @@ class Stack {
     }
 }
 
+function isValidInput(ch) {
+    let validChars = "1234567890+-*/^.";
+    return validChars.includes(ch);
+}
+
 function isOperator(ch) {
     let operators = "^/*+-";
     return operators.includes(ch);
@@ -167,6 +172,13 @@ function initialize() {
 
     let equalsButton = document.querySelector("#equals");
     equalsButton.addEventListener("click", calculate);
+
+    let display = document.querySelector("#display");
+    display.addEventListener("keypress", event => {
+        if (!isValidInput(event.key)) {
+            event.preventDefault();
+        }
+    });
 
     clearDisplay();
 }
