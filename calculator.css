@@ -10,6 +10,7 @@ button {
     align-items: center;
     color: #515151;
     background-color: #f2f0ec;
+    font-family: "Roboto", sans-serif;
     font-size: 2em;
     border: 1px solid #d8d5cf;
 }
@@ -40,8 +41,10 @@ button {
 
 #display {
     grid-area: display;
+    text-align: right;
     box-sizing: border-box;
     width: 100%;
+    font-family: "Roboto", sans-serif;
     font-size: 2em;
     background-color: #f2f0ec;
     border: 1px solid #d8d5cf;
