@@ -164,6 +164,12 @@ function initialize() {
         });
     }
 
+    let buttons = document.querySelectorAll("button");
+    for (let i = 0; i < buttons.length; ++i) {
+        let button = buttons[i];
+        button.style.gridArea = button.id;
+    }
+
     let clearButton = document.querySelector("#clear");
     clearButton.addEventListener("click", clearDisplay);
 
@@ -173,6 +179,7 @@ function initialize() {
     let equalsButton = document.querySelector("#equals");
     equalsButton.addEventListener("click", calculate);
 
+    // Prevent keyboard input of characters that aren't on the calculator
     let display = document.querySelector("#display");
     display.addEventListener("keypress", event => {
         if (!isValidInput(event.key)) {
