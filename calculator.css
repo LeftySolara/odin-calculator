@@ -5,8 +5,13 @@ body {
 }
 
 button {
-    width: 1.5em;
-    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #515151;
+    background-color: #f2f0ec;
+    font-size: 2em;
+    border: 1px solid #d8d5cf;
 }
 
 #container {
@@ -19,39 +24,75 @@ button {
 
 #calculator {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-gap: 0px 0px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-areas: 
-        "display display"
-        "numberButtons operatorButtons";
-    grid-gap: 0px;
-    width: 20%;
+        "display display display display display"
+        "exp leftBrace rightBrace clear backspace"
+        "one two three plus backspace"
+        "four five six minus equals"
+        "seven eight nine mult equals"
+        "zero zero decimal divide equals";
+    width: 33%;
+    height: 50%;
 }
 
 #display {
     grid-area: display;
-    text-align: right;
-    height: 1.5em;
-    width: 95%;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 2em;
+    background-color: #f2f0ec;
+    border: 1px solid #d8d5cf;
 }
 
-#numberButtons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-area: numberButtons;
+#one {
+    grid-area: one;
 }
 
-#operatorButtons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 1fr);
-    grid-area: operatorButtons;
-    grid-template-areas:
-        "plus backspace"
-        "minus ."
-        "mult ."
-        "divide equals";
+#two {
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+#seven {
+    grid-area: seven;
+}
+
+#eight {
+    grid-area: eight;
+}
+
+#nine {
+    grid-area: nine;
+}
+
+#zero {
+    grid-area: zero;;
+}
+
+#decimal {
+    grid-area: decimal;
+}
+
+#clear {
+    grid-area: clear;
 }
 
 #plus {
@@ -70,11 +111,24 @@ button {
     grid-area: divide;
 }
 
-
-#backspaceBtn {
-    grid-area: backspace;
+#exp {
+    grid-area: exp;
 }
 
-#equalsBtn {
+#leftBrace {
+    grid-area: leftBrace;
+}
+
+#rightBrace {
+    grid-area: rightBrace;
+}
+
+#backspace {
+    grid-area: backspace;
+    height: auto;
+}
+
+#equals {
     grid-area: equals;
+    height: auto;
 }
