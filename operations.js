@@ -156,15 +156,15 @@ function calculate() {
 }
 
 function initialize() {
-    let numberButtons = document.querySelectorAll(".symbolBtn");
-    for (let i = 0; i < numberButtons.length; ++i) {
-        let number = numberButtons[i].textContent;
-        numberButtons[i].addEventListener("click", function (e) {
-            inputSymbol(number);
+    let symbolButtons = document.querySelectorAll(".symbolBtn");
+    for (let i = 0; i < symbolButtons.length; ++i) {
+        let symbol = symbolButtons[i].textContent;
+        symbolButtons[i].addEventListener("click", function (e) {
+            inputSymbol(symbol);
         });
     }
 
-    let clearButton = document.querySelector("#clearBtn");
+    let clearButton = document.querySelector("#clear");
     clearButton.addEventListener("click", clearDisplay);
 
     let backspaceButton = document.querySelector("#backspace");
