@@ -58,19 +58,19 @@ function process(operands, operators) {
 
     switch (op) {
         case "+":
-            result = a + b;
+            result = b + a;
             break;
         case "-":
             result = b - a;
             break;
         case "*":
-            result = a * b;
+            result = b * a;
             break;
         case "/":
             result = b / a;
             break;
         case "^":
-            result = a ** b;
+            result = b ** a;
             break;
     }
     operands.push(result);
