@@ -1,5 +1,22 @@
+header {
+    display: block;
+    line-height: 1em;
+    font-family: "Fira Sans", sans-serif;
+    text-align: center;
+    color: #2d2d2d;
+    margin-top: 60px;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
 body {
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
 }
@@ -15,19 +32,26 @@ button {
     border: 1px solid #d8d5cf;
 }
 
+a {
+    color: #99cc99;
+    text-decoration: none;
+}
+
 #container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     align-content: center;
     justify-content: center;
     height: 100%;
+    width: 33%;
+    margin: 0 auto;
 }
 
 #calculator {
     display: grid;
     grid-gap: 0px 0px;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-template-areas: 
         "display display display display display"
         "exp leftBrace rightBrace clear backspace"
@@ -35,8 +59,9 @@ button {
         "four five six minus equals"
         "seven eight nine mult equals"
         "zero zero decimal divide equals";
-    width: 33%;
+    width: 100%;
     height: 50%;
+    margin-top: 30px;
 }
 
 #display {
